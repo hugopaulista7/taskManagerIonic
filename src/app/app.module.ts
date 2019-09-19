@@ -9,9 +9,16 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { CreateTaskModalPage } from './components/create-task-modal/create-task-modal.page';
+
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+    declarations: [
+        AppComponent,
+        CreateTaskModalPage
+    ],
+  entryComponents: [
+      CreateTaskModalPage
+  ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,

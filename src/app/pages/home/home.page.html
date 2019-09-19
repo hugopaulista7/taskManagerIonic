@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar class="ion-text-center">
+        <ion-buttons slot="end">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Gerenciador de Tarefas</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addTask()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>
