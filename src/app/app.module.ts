@@ -10,21 +10,26 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { CreateTaskModalPage } from './components/create-task-modal/create-task-modal.page';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
     declarations: [
         AppComponent,
+        CreateTaskModalPage,
+    ],
+    entryComponents: [
         CreateTaskModalPage
     ],
-  entryComponents: [
-      CreateTaskModalPage
-  ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-  ],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule, 
+        IonicModule.forRoot(),
+        ReactiveFormsModule,
+        AppRoutingModule
+    ],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
