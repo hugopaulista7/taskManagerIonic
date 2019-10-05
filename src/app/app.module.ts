@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { CreateTaskModalPage } from './components/create-task-modal/create-task-modal.page';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
     declarations: [
         AppComponent,
@@ -23,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         BrowserModule, 
         IonicModule.forRoot(),
         ReactiveFormsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        IonicStorageModule.forRoot()
     ],
     providers: [
         StatusBar,

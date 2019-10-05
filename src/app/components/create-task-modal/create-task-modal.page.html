@@ -1,6 +1,5 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Adicionar nova tarefa</ion-title>
     <ion-buttons slot="end">
         <ion-button fill="clear" color="danger" (click)="close()">Fechar</ion-button>
     </ion-buttons>
@@ -8,14 +7,13 @@
 </ion-header>
 
 <ion-content>
-<!-- implementar form -->
     <ion-list>
         <ion-list-header class="ion-text-center">
             <ion-title>
                 Nova tarefa
             </ion-title>
         </ion-list-header>
-        <form [formGroup]="taskForm">
+        <form [formGroup]="form">
             <ion-item>
                 <ion-label position="floating">Nome da tarefa:</ion-label>
                 <ion-input formControlName="name" type="text"></ion-input>
@@ -25,13 +23,19 @@
                 <ion-textarea formControlName="description"></ion-textarea>
             </ion-item>
             <ion-item>
-                <ion-label position="floating">Cor:</ion-label>
-                
+                <ion-label position="floating">Data da tarefa:</ion-label>
+                <ion-datetime formControlName="date"
+                              placeholder="DD/MM/AAAA"
+                              cancelText="Cancelar"
+                              doneText="Feito"
+                              [monthShortNames]="monthNames"
+                              [monthNames]="monthNames"
+                              min="2019"
+                              pickerFormat="DD/MMMM/YYYY HH:mm"
+                              displayFormat="DD/MM/YYYY HH:mm">
+                </ion-datetime>
             </ion-item>
-            <ion-item>
-                <ion-label position="floating">Nome da tarefa:</ion-label>
-                <ion-input formControlName="name" type="text"></ion-input>
-            </ion-item>
+            <ion-button color="success" (click)="save()" expand="block">Salvar</ion-button>
         </form>
     </ion-list>
 </ion-content>

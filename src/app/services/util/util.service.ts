@@ -11,4 +11,21 @@ export class UtilService {
         console.log(message, variable);
     }
 
+
+    public getMothNames() {
+        return [
+            'JAN',
+            'FEV',
+            'MAR',
+            'ABR',
+            'MAI',
+            'JUN',
+            'JUL',
+            'AGO',
+            'SET',
+            'OUT',
+            'NOV',
+            'DEZ'
+        ];
+    }
 }

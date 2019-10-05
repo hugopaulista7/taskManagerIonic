@@ -1,5 +1,7 @@
 {
   "name": "taskManager",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
